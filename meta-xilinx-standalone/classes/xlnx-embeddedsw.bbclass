@@ -1,7 +1,7 @@
 # Automatically determnine the version from the bb file
 ESW_VER ?= "${@bb.parse.vars_from_file(d.getVar('FILE', False),d)[1] or 'master'}"
 
-REPO ??= "git://github.com/Xilinx/embeddedsw.git;protocol=https"
+REPO ??= "https://github.com/Xilinx/embeddedsw.git;protocol=https"
 
 ESW_BRANCH[2022.1] = "xlnx_rel_v2022.1_update"
 ESW_BRANCH[2022.2] = "xlnx_rel_v2022.2"
